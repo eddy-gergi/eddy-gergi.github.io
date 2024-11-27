@@ -117,8 +117,8 @@ const directories = {
         "Popular python games interacted with using CLI",
       ],
       [
-        "Final Year Project",
-        "Confidential",
+        "Final Year Project(Confidential)",
+        " ",
         "A python script for copyright infringements on social media",
       ],
     ].map(([name, url, description = ""]) => {
