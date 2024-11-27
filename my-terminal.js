@@ -85,7 +85,7 @@ const commands = {
   },
   resume() {
     this.echo("Downloading Resume...", { delay: 50 });
-    window.location.href = "assets/resume/Resume_EddyGergi.pdf"; 
+    window.location.href = "assets/resume/Eddy_Gergi_Resume.pdf"; 
   },
   contact() {
     this.echo("Redirecting to email...", { delay: 50 });
