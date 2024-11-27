@@ -84,11 +84,11 @@ const commands = {
     }
   },
   resume() {
-    this.echo("downloading resume...", { delay: 50 });
+    this.echo("Downloading Resume...", { delay: 50 });
     window.location.href = "assets/resume/Resume_EddyGergi.pdf"; 
   },
   contact() {
-    this.echo("redirecting to email...", { delay: 50 });
+    this.echo("Redirecting to email...", { delay: 50 });
     window.location.href = "mailto:imeddygergi@gmail.com"; 
   },
 };
@@ -97,9 +97,9 @@ const directories = {
   education: [
     "",
     "<white>education && certifications</white>",
-    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science GPA : 3.6/4.0 </p>",
-    '* <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1102befa3cf1450a989a6d87d98cd7ac"> AWS Certified SysOps Administrator - Associate </a>',
-    '* <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/9b6fd6e04b964a2584392bd1abccf612"> AWS Certified Cloud Practitioner - Foundational </a>"',
+    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science</p>",
+    "* <p> AWS Certified SysOps Administrator - Associate </p>",
+    "* <p> AWS Certified Cloud Practitioner - Foundational </p>",
     "",
   ],
   projects: [
@@ -114,12 +114,12 @@ const directories = {
       [
         "Python CLI Games",
         "https://github.com/theddygergi/BasicPythonGames",
-        "popular python games interacted with using cli",
+        "Popular python games interacted with using CLI",
       ],
       [
         "Final Year Project(Confidential)",
         " ",
-        "a python script for copyright infringements on social media",
+        "A python script for copyright infringements on social media",
       ],
     ].map(([name, url, description = ""]) => {
       return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
