@@ -112,7 +112,7 @@ const directories = {
         "library management system with react.js and asp.net",
       ],
       [
-        "Python CLI games",
+        "Python CLI Games",
         "https://github.com/theddygergi/BasicPythonGames",
         "Popular python games interacted with using CLI",
       ],
