@@ -98,8 +98,8 @@ const directories = {
     "",
     "<white>education && certifications</white>",
     "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science GPA : 3.6/4.0 </p>",
-    "* <a href='https://cp.certmetrics.com/amazon/en/public/verify/credential/1102befa3cf1450a989a6d87d98cd7ac'> AWS Certified SysOps Administrator - Associate </a>",
-    "* <a href='https://cp.certmetrics.com/amazon/en/public/verify/credential/9b6fd6e04b964a2584392bd1abccf612'> AWS Certified Cloud Practitioner - Foundational </a>",
+    '* <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1102befa3cf1450a989a6d87d98cd7ac"> AWS Certified SysOps Administrator - Associate </a>',
+    '* <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/9b6fd6e04b964a2584392bd1abccf612"> AWS Certified Cloud Practitioner - Foundational </a>"',
     "",
   ],
   projects: [
