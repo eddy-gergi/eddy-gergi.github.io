@@ -84,11 +84,11 @@ const commands = {
     }
   },
   resume() {
-    this.echo("Downloading Resume...", { delay: 50 });
+    this.echo("downloading resume...", { delay: 50 });
     window.location.href = "assets/resume/Resume_EddyGergi.pdf"; 
   },
   contact() {
-    this.echo("Redirecting to email...", { delay: 50 });
+    this.echo("redirecting to email...", { delay: 50 });
     window.location.href = "mailto:imeddygergi@gmail.com"; 
   },
 };
@@ -114,12 +114,12 @@ const directories = {
       [
         "Python CLI Games",
         "https://github.com/theddygergi/BasicPythonGames",
-        "Popular python games interacted with using CLI",
+        "popular python games interacted with using cli",
       ],
       [
         "Final Year Project(Confidential)",
         " ",
-        "A python script for copyright infringements on social media",
+        "a python script for copyright infringements on social media",
       ],
     ].map(([name, url, description = ""]) => {
       return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
