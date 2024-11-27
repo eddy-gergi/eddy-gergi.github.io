@@ -97,9 +97,9 @@ const directories = {
   education: [
     "",
     "<white>education && certifications</white>",
-    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science</p>",
+    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science< GPA : 3.6/4.0 /p>",
     "* <p> AWS Certified SysOps Administrator - Associate </p>",
-    "* <p> AWS Certified Cloud Practitioner - Foundational </p>",
+    "* <p> AWS Certified Cloud Practitioner - Foundational</p>",
     "",
   ],
   projects: [
