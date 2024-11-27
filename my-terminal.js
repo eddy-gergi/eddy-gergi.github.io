@@ -108,12 +108,12 @@ const directories = {
     [
       [
         "LibraFlick",
-        "https://terminal.jcubic.pl",
+        "https://github.com/theddygergi/project-dotnet-libraflick",
         "library management system with react.js and asp.net",
       ],
       [
         "Python CLI games",
-        "https://lips.js.org",
+        "https://github.com/theddygergi/BasicPythonGames",
         "Popular python games interacted with using CLI",
       ],
       [
