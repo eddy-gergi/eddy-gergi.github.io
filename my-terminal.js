@@ -124,6 +124,12 @@ const directories = {
         " ",
         "a python script for copyright infringements on social media",
       ],
+      ["Network Packet Sniffer (Ongoing)",
+        "",
+        "a network traffic sniffer using python and scapy"
+
+      ]
+
     ].map(([name, url, description = ""]) => {
       return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
     }),
