@@ -97,7 +97,7 @@ const directories = {
   education: [
     "",
     "<white>education && certifications</white>",
-    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science< GPA : 3.6/4.0 /p>",
+    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science< GPA : 3.6/4.0 </p>",
     "* <p> AWS Certified SysOps Administrator - Associate </p>",
     "* <p> AWS Certified Cloud Practitioner - Foundational</p>",
     "",
@@ -114,12 +114,12 @@ const directories = {
       [
         "Python CLI Games",
         "https://github.com/theddygergi/BasicPythonGames",
-        "Popular python games interacted with using CLI",
+        "popular python games interacted with using CLI",
       ],
       [
         "Final Year Project(Confidential)",
         " ",
-        "A python script for copyright infringements on social media",
+        "a python script for copyright infringements on social media",
       ],
     ].map(([name, url, description = ""]) => {
       return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
@@ -129,7 +129,7 @@ const directories = {
   skills: [
     "",
     "<white>languages</white>",
-    ["JavaScript", "Python", "SQL", "C/C++", "C#(.NET)", "Bash"].map(
+    ["JavaScript", "Python", "SQL", "C/C++", "C#(.NET)"].map(
       (lang) => `* <yellow>${lang}</yellow>`
     ),
     "",
@@ -137,7 +137,7 @@ const directories = {
     ["React.js", "Node.js", "Express"].map((lib) => `* <green>${lib}</green>`),
     "",
     "<white>tools</white>",
-    ["Docker", "git", "GNU/Linux", "AWS Management Console"].map(
+    ["Git", "GNU/Linux", "AWS Management Console"].map(
       (lib) => `* <blue>${lib}</blue>`
     ),
     "",
