@@ -97,12 +97,12 @@ const directories = {
   education: [
     "",
     "<white>education && certifications</white>",
-    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science< GPA : 3.6/4.0 </p>",
+    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science GPA : 3.6/4.0</yellow> </p>",
     "* <p> AWS Certified SysOps Administrator - Associate </p>",
     "* <p> AWS Certified Cloud Practitioner - Foundational</p>",
-    "<white> currently studying</white>",
-    "<p>David Bombal's full CCNA course - Udemy</p>",
-    "<p>Imran Afsal's Complete Linux Course for System Administration - Udemy</p>",
+    "<white>currently studying</white>",
+    "* <p>David Bombal's full CCNA course - Udemy</p>",
+    "* <p>Imran Afsal's Complete Linux Course for System Administration - Udemy</p>",
     "",
   ],
   projects: [
