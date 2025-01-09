@@ -84,7 +84,7 @@ const commands = {
     }
   },
   resume() {
-    this.echo("Downloading Resume...", { delay: 50 });
+    this.echo("Opening Resume...", { delay: 50 });
     window.location.href = "assets/resume/Eddy_Gergi_Resume.pdf"; 
   },
   contact() {
@@ -117,7 +117,7 @@ const directories = {
       [
         "Python CLI Games",
         "https://github.com/theddygergi/BasicPythonGames",
-        "popular python games interacted with using CLI",
+        "popular python games interacted with using cli",
       ],
       [
         "Final Year Project(Confidential)",
@@ -125,10 +125,15 @@ const directories = {
         "a python script for copyright infringements on social media",
       ],
       ["Network Packet Sniffer (Ongoing)",
-        "",
+        "https://github.com/eddy-gergi/basic-network-sniffer",
         "a network traffic sniffer using python and scapy"
-
+      ],
+      [
+        "LibraFlick v2",
+        "https://github.com/theddygergi/project-dotnet-libraflick",
+        "upgraded library management system with react.js, tailwindcss with daisyui and java springboot",
       ]
+
 
     ].map(([name, url, description = ""]) => {
       return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
@@ -138,12 +143,12 @@ const directories = {
   skills: [
     "",
     "<white>languages</white>",
-    ["JavaScript", "Python", "SQL", "C/C++", "C#(.NET)"].map(
+    ["JavaScript", "Python", "SQL", "C/C++", "C#(.NET), Java"].map(
       (lang) => `* <yellow>${lang}</yellow>`
     ),
     "",
     "<white>libraries</white>",
-    ["React.js", "Node.js", "Express"].map((lib) => `* <green>${lib}</green>`),
+    ["React.js", "Node.js", "Express, Springboot, ASP.NET"].map((lib) => `* <green>${lib}</green>`),
     "",
     "<white>tools</white>",
     ["Git", "GNU/Linux", "AWS Management Console"].map(
