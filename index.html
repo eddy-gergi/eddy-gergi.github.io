@@ -15,13 +15,18 @@
     <script src="https://cdn.jsdelivr.net/npm/isomorphic-lolcat"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/xml_formatting.js"></script>
     <script src="my-terminal.js"></script>
+    <script src="font-resize.js"></script>
     <style>
       :root {
-        --size: 1.3;
+        --size: 2;
       }
 
       .command, .directory {
         cursor: pointer;
+      }
+
+      body {
+        font-size: calc(var(--size) * 1rem);
       }
     </style>
   </body>

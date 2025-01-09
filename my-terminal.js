@@ -8,6 +8,7 @@ const url = "https://v2.jokeapi.dev/joke/Programming";
 const dirs = ["education", "projects", "skills"];
 const files = ["joke", "resume", "contact"];
 
+
 const commands = {
   cd(dir = null) {
     if (dir === null || (dir === ".." && cwd !== root)) {
@@ -21,6 +22,10 @@ const commands = {
     }
   },
   ls(dir = null) {
+    if (dir == "help"){
+      this.help();
+      return;
+    }
     if (dir) {
       if (dir.match(/^~\/?$/)) {
         print_home();
@@ -85,29 +90,50 @@ const commands = {
   },
   resume() {
     this.echo("Opening Resume...", { delay: 50 });
-    window.location.href = "assets/resume/Eddy_Gergi_Resume.pdf"; 
+    window.location.href = "assets/resume/Eddy_Gergi_Resume.pdf";
   },
   contact() {
     this.echo("Redirecting to email...", { delay: 50 });
-    window.location.href = "mailto:imeddygergi@gmail.com"; 
+    window.location.href = "mailto:imeddygergi@gmail.com";
   },
+  help(){
+    const commandList = [
+      {
+        name: "cd [directory_name]",
+        description: "change directory to dir_name.",
+      },
+      {
+        name: "ls [directory_name]",
+        description: "list directory contents to dir_name.",
+      },
+      {
+        name: "clear",
+        description: "clear the terminal.",
+      },
+    ];
+
+    term.echo("<white>available commands:</white>");
+    commandList.forEach((command) => {
+      term.echo(`<green>${command.name}</green> - ${command.description}`)
+    })
+  }
 };
 
 const directories = {
   education: [
     "",
     "<white>education && certifications</white>",
-    "* <p> Lebanese University - Faculty of Sciences II </p> <yellow>BS in Computer Science GPA : 3.6/4.0</yellow> </p>",
+    "* <p> Lebanese University - Faculty of Sciences II <yellow>BS in Computer Science GPA : 3.6/4.0</yellow></p>",
     "* <p> AWS Certified SysOps Administrator - Associate </p>",
     "* <p> AWS Certified Cloud Practitioner - Foundational</p>",
     "<white>currently studying</white>",
-    "* <p>David Bombal's full CCNA course - Udemy</p>",
-    "* <p>Imran Afsal's Complete Linux Course for System Administration - Udemy</p>",
+    "* <p> David Bombal's full CCNA course - Udemy</p>",
+    "* <p> Imran Afsal's Complete Linux Course for System Administration - Udemy</p>",
     "",
   ],
   projects: [
     "",
-    "<white>My Projects</white>",
+    "<white>my projects</white>",
     [
       [
         "LibraFlick",
@@ -120,38 +146,41 @@ const directories = {
         "popular python games interacted with using cli",
       ],
       [
-        "Final Year Project(Confidential)",
-        " ",
+        "Final Year Project (Confidential)",
+        "confidential",
         "a python script for copyright infringements on social media",
       ],
-      ["Network Packet Sniffer",
+      [
+        "Network Packet Sniffer",
         "https://github.com/eddy-gergi/basic-network-sniffer",
-        "a network traffic sniffer using python and scapy"
+        "a network traffic sniffer using python and scapy",
       ],
       [
         "LibraFlick v2",
         "https://github.com/eddy-gergi/react-springboot",
         "upgraded library management system with react.js, tailwindcss with daisyui and java springboot",
-      ]
-
-
+      ],
     ].map(([name, url, description = ""]) => {
-      return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
+      return `* <a href="${url}" target="_blank" class="project-link ${
+        url === "confidential" ? "confidential" : ""
+      }">${name}</a> &mdash; <white>${description}</white>`; 
     }),
     "",
   ].flat(),
   skills: [
     "",
     "<white>languages</white>",
-    ["JavaScript", "Python", "SQL", "C/C++", "C#(.NET), Java"].map(
+    ["JavaScript", "Python", "SQL", "C/C++", "C#(.NET)", "Java"].map(
       (lang) => `* <yellow>${lang}</yellow>`
     ),
     "",
     "<white>libraries</white>",
-    ["React.js", "Node.js", "Express, Springboot, ASP.NET"].map((lib) => `* <green>${lib}</green>`),
+    ["React.js", "Node.js", "Express", "Springboot", "ASP.NET"].map(
+      (lib) => `* <green>${lib}</green>`
+    ),
     "",
-    "<white>tools</white>",
-    ["Git", "GNU/Linux", "AWS Management Console"].map(
+    "<white>tools & others</white>",
+    ["Git", "GNU/Linux", "AWS Management Console", "networking", "hardware & software problem-solving"].map(
       (lib) => `* <blue>${lib}</blue>`
     ),
     "",
@@ -169,11 +198,11 @@ const formatted_list = command_list.map(
 );
 const help = formatter.format(command_list);
 
-$.terminal.new_formatter([
-  new RegExp(`^\\s*(${dirs.join("|")})`),
-  function (_, command, args) {
-    return `<white>${command}</white><aqua>${args}</aqua>`;
-  },
+$.terminal.new_formatter([ 
+  new RegExp(`^\\s*(${dirs.join("|")})`), 
+  function (_, command, args) { 
+    return `<white>${command}</white><aqua>${args}</aqua>`; 
+  } 
 ]);
 
 figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
@@ -208,12 +237,27 @@ term.on("click", ".directory", function () {
   term.exec(`cd ~/${dir}`);
 });
 
+term.on("click", ".project-link", function () {
+  const projectName = $(this).text();
+  const href = $(this).attr("href");
+  if (href === "confidential") {
+    event.preventDefault();
+    term.echo(
+      "<red>I told you it was confidential, so why did you look?</red>"
+    );
+  } else {
+    window.location.href = href;
+  }
+});
+
 term.history_state(false);
 
 function ready() {
   term
     .echo(() => rainbow(render("EDDY GERGI")))
-    .echo("<white>Welcome to my Terminal Portfolio</white>\n")
+    .echo(
+      "<white>Welcome to my terminal-based portfolio ! hope you're comfortable navigating linux :)</white>\n"
+    )
     .resume();
 }
 
