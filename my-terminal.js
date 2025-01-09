@@ -124,13 +124,13 @@ const directories = {
         " ",
         "a python script for copyright infringements on social media",
       ],
-      ["Network Packet Sniffer (Ongoing)",
+      ["Network Packet Sniffer",
         "https://github.com/eddy-gergi/basic-network-sniffer",
         "a network traffic sniffer using python and scapy"
       ],
       [
         "LibraFlick v2",
-        "https://github.com/theddygergi/project-dotnet-libraflick",
+        "https://github.com/eddy-gergi/react-springboot",
         "upgraded library management system with react.js, tailwindcss with daisyui and java springboot",
       ]
 
