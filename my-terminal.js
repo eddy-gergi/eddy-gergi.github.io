@@ -90,7 +90,7 @@ const commands = {
   },
   resume() {
     this.echo("Opening Resume...", { delay: 50 });
-    window.location.href = "assets/resume/Eddy_Gergi_Resume.pdf";
+    window.location.href = "assets/resume/Eddy-Gergi-Resume.pdf";
   },
   contact() {
     this.echo("Redirecting to email...", { delay: 50 });
@@ -246,7 +246,7 @@ term.on("click", ".project-link", function () {
       "<red>I told you it was confidential, so why did you look?</red>"
     );
   } else {
-    window.location.href = href;
+    window.open(href, "_blank");
   }
 });
 
