@@ -90,7 +90,7 @@ const commands = {
   },
   resume() {
     this.echo("Opening Resume...", { delay: 50 });
-    window.location.href = "assets/resume/Eddy-Gergi-Resume.pdf";
+    window.open("assets/resume/Eddy-Gergi-Resume.pdf", "_blank");
   },
   contact() {
     this.echo("Redirecting to email...", { delay: 50 });
